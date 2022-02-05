@@ -12,13 +12,6 @@ class App extends Component {
 
   render() {
     let { isLoggedIn } = this.state;
-    let AuthButton;
-
-    if (isLoggedIn) {
-      AuthButton = <button>Logout</button>;
-    } else {
-      AuthButton = <button>Login</button>;
-    }
 
     return (
       <div className="App">
@@ -26,7 +19,7 @@ class App extends Component {
           This is a Demo showing several ways to implement Conditional Rendering
           in React.
         </h1>
-        {AuthButton}
+        {isLoggedIn ? <button>Logout</button> : <button>Login</button>}
       </div>
     );
   }
