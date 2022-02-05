@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import AuthButton from "./AuthButton";
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component {
           This is a Demo showing several ways to implement Conditional Rendering
           in React.
         </h1>
-        {renderAuthButton()}
+        <AuthButton isLoggedIn={isLoggedIn} />
       </div>
     );
   }
